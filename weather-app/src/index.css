@@ -92,3 +92,10 @@ main {
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 
 }
+
+.weather-box .weather {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(red, green, blue, alpha);
+}
