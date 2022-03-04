@@ -12,11 +12,12 @@ function App() {
 
   const search = (event) => {
     if (event.key === "Enter") {
-      axios.get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      axios
+        .get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then((response) => {
-          setWeather(response);
+          setWeather(response.data);
           setQuery("");
-          console.log("Here-->", response.data);
+          console.log("Here-->", response.data.weather[0].description);
         });
     }
   };
@@ -67,14 +68,20 @@ function App() {
             onKeyPress={search}
           />
         </div>
-        <div className="location-box">
-          <div className="location">Toronto, CA</div>
-          <div className="date">{dateBuilder(new Date())}</div>
+        {(typeof weather.main != "undefined") ? (
+        <div>
+          <div className="location-box">
+            <div className="location">
+              {weather.name}, {weather.sys.country}
+            </div>
+            <div className="date">{dateBuilder(new Date())}</div>
+          </div>
+          <div className="weather-box">
+            <div className="temp">°C</div>
+            <div className="weather"></div>
+          </div>
         </div>
-        <div className="weather-box">
-          <div className="temp">15°C</div>
-          <div className="weather">Sunny ☀️</div>
-        </div>
+        ) : ('')}
       </main>
     </div>
   );
