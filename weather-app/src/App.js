@@ -17,7 +17,7 @@ function App() {
         .then((response) => {
           setWeather(response.data);
           setQuery("");
-          console.log("Here-->", response.data.weather[0].description);
+          console.log("Here-->", response.data.weather);
         });
     }
   };
@@ -55,18 +55,7 @@ function App() {
     return `${day} ${date} ${month} ${year}`;
   };
 
-  function temperature() {
-    let result = `app`;
-    if (typeof weather.main != "undefined") {
-      if (weather.main.temp > 16) {
-        result = `app warm`;
-      } else {
-        return result;
-      }
-
-      return result;
-    }
-  }
+ 
   return (
     <div
       className={
@@ -98,7 +87,7 @@ function App() {
             </div>
             <div className="weather-box">
               <div className="temp">{Math.round(weather.main.temp)}°C</div>
-              <div className="weather">{weather.weather[0].description}</div>
+              <div className="weather">{weather.weather[0].main}</div>
             </div>
           </div>
         ) : (
