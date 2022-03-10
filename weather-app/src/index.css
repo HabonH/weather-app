@@ -16,7 +16,7 @@ body {
 }
 
 .app.warm{
-  background-image: url('./assets//warm.jpg');
+  background-image: url('./assets/warm.jpg');
   background-size: cover;
   background-position: bottom;
 }
@@ -117,8 +117,26 @@ main {
   }
 
   .app.warm{
-    background-image: url('./assets//warm.jpg');
+    background-image: url('./assets/warm.jpg');
     background-size: cover;
     background-position: top;
+  }
+
+  .location-box .location {
+    font-size: 6.65em;
+  }
+
+  .location-box .date {
+    font-size: 33px;
+  }
+
+  .weather-box .temp {
+    font-size: 125px;
+  }
+  .search-box .search-bar {
+  font-size: 26px;
+  }
+  .weather-box .weather {
+  font-size: 45px;
   }
 }
