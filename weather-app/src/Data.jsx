@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Data() {
   const dateBuilder = (d) => {
@@ -33,9 +33,7 @@ function Data() {
 
     return `${day} ${date} ${month} ${year}`;
   };
-  return (
-    <div className="date">{dateBuilder(new Date())}</div>
-  )
+  return <div className="date">{dateBuilder(new Date())}</div>;
 }
 
-export default Data
+export default Data;
