@@ -17,6 +17,8 @@ body {
 
 .app.warm{
   background-image: url('./assets//warm.jpg');
+  background-size: cover;
+  background-position: bottom;
 }
 
 main {
@@ -106,3 +108,17 @@ main {
   text-shadow: 3px 3px rgba(red, green, blue, alpha);
 }
 
+@media only screen and (min-width: 600px){
+  .app {
+    background-image: url('./assets/cold.jpg');
+    background-size: cover;
+    background-position: top;
+    transition: 0.4s ease-out;
+  }
+
+  .app.warm{
+    background-image: url('./assets//warm.jpg');
+    background-size: cover;
+    background-position: top;
+  }
+}
