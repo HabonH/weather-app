@@ -110,7 +110,7 @@ main {
   text-shadow: 3px 3px rgba(red, green, blue, alpha);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .app {
     background-image: url("./assets/cold.jpg");
     background-size: cover;
